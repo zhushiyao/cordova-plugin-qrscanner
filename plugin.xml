@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin 
-  xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-plugin-qrscanner" version="3.0.1">
-  <name>QRScanner</name>
+  xmlns="http://www.phonegap.com/ns/plugins/1.0" id="dfocus-fm-cordova-plugin-qrscanner" version="3.0.1">
+  <name>DFQRScanner</name>
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
   </engines>
-  <js-module src="www/www.min.js" name="QRScanner">
-    <clobbers target="QRScanner" />
+  <js-module src="www/www.min.js" name="DFQRScanner">
+    <clobbers target="DFQRScanner" />
   </js-module>
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="QRScanner">
-        <param name="android-package" value="com.bitpay.cordova.qrscanner.QRScanner"/>
+      <feature name="DFQRScanner">
+        <param name="android-package" value="com.bitpay.cordova.dfqrscanner.DFQRScanner"/>
       </feature>
     </config-file>
     <config-file target="AndroidManifest.xml" parent="/*">
@@ -19,17 +19,17 @@
       <uses-feature android:name="android.hardware.camera" android:required="false" />
       <uses-feature android:name="android.hardware.camera.front" android:required="false" />
     </config-file>
-    <source-file src="src/android/QRScanner.java" target-dir="src/com/bitpay/cordova/qrscanner"/>
-    <framework src="src/android/qrscanner.gradle" custom="true" type="gradleReference"/>
+    <source-file src="src/android/DFQRScanner.java" target-dir="src/com/bitpay/cordova/dfqrscanner"/>
+    <framework src="src/android/dfqrscanner.gradle" custom="true" type="gradleReference"/>
   </platform>
   <platform name="ios">
     <config-file target="config.xml" parent="/*">
-      <feature name="QRScanner">
-        <param name="ios-package" value="QRScanner"/>
+      <feature name="DFQRScanner">
+        <param name="ios-package" value="DFQRScanner"/>
       </feature>
     </config-file>
     <dependency id="cordova-plugin-add-swift-support" spec="~1.7.2" />
-    <source-file src="src/ios/QRScanner.swift"/>
+    <source-file src="src/ios/DFQRScanner.swift"/>
     <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
       <string>The camera is used to scan QR codes.</string>
     </config-file>

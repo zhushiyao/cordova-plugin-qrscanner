@@ -1,4 +1,4 @@
-package com.bitpay.cordova.qrscanner;
+package com.bitpay.cordova.dfqrscanner;
 
 import android.Manifest;
 import android.content.Intent;
@@ -467,7 +467,7 @@ public class QRScanner extends CordovaPlugin implements BarcodeCallback {
                 ((ViewGroup) webView.getView().getParent()).addView(mBarcodeView, cameraPreviewParams);
 
                 cameraPreviewing = true;
-                webView.getView().bringToFront();
+                // webView.getView().bringToFront();
 
                 mBarcodeView.resume();
             }
